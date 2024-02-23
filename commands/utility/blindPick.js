@@ -44,6 +44,7 @@ async function execute(interaction) {
     components: [row],
   });
 
+  const collectorFilter = (i) => i.user.id === interaction.user.id;
   try {
     const confirmation = await response.awaitMessageComponent({
       filter: collectorFilter,
